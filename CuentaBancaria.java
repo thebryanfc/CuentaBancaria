@@ -1,47 +1,26 @@
 public class CuentaBancaria {
-     String Name;
-     double Balance;
-     double NoCuenta;
-     String NombreBanco;
-     String Email;
+    private double saldo;
+    private int numeroCuenta;
 
-    public String getName() {
-        return Name;
+    public CuentaBancaria(double saldoInicial, int numeroCuenta) {
+        this.saldo = saldoInicial;
+        this.numeroCuenta = numeroCuenta;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public double getSaldo() {
+        return saldo;
     }
 
-    public double getBalance() {
-        return Balance;
+    public int getNumeroCuenta() {
+        return numeroCuenta;
     }
 
-    public void setBalance(double balance) {
-        Balance = balance;
+    public void depositar(double cantidad) {
+        saldo += cantidad;
     }
 
-    public double getNoCuenta() {
-        return NoCuenta;
-    }
-
-    public void setNoCuenta(double noCuenta) {
-        NoCuenta = noCuenta;
-    }
-
-    public String getNombreBanco() {
-        return NombreBanco;
-    }
-
-    public void setNombreBanco(String nombreBanco) {
-        NombreBanco = nombreBanco;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String email) {
-        Email = email;
+    public void retirar(double cantidad) {
+        saldo -= cantidad;
     }
 }
+
